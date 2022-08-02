@@ -1,0 +1,37 @@
+package ejercicio8;
+
+import java.util.Scanner;
+
+public class EJERCICIO8 {
+
+//calcular interes compuesto aplicando siguiente formula M = (1 + r%)t.C    I = M-C
+    // Monto (M) suma del capital mas intereses en un tiempo determinado
+    // Tasa de Interés (r%) ganancia por cada 100 uds moneda en cada periodo de tiemo
+    // Capital (C) Es todo aquello que se va a ceder durante un tiempo para generar una ganancia
+    // Interes (I) Parte de la utilidad del capitalista al prestar un dinero
+    // Tiempo (t) duración en la que se cede el capital
+    public static void main(String[] args) {
+
+        // Variables 
+        float c, r, t, i, m;
+
+        // Entrada
+        Scanner teclado = new Scanner(System.in);
+        System.out.print("Capital: ");
+        c = teclado.nextFloat();
+        System.out.print("Tasa de interés: ");
+        r = teclado.nextFloat();
+        System.out.print("Tiempo: ");
+        t = teclado.nextFloat();
+
+        // Proceso
+        m = (float) (Math.pow((double) (1 + r / 100), (double) t)) * c;
+        i = m - c;
+
+        // Salida
+        System.out.println("");
+        System.out.println("Interes: " + i);
+        System.out.println("Monto: " + m);
+    }
+
+}
